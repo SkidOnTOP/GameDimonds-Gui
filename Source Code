@@ -1,0 +1,62 @@
+--Scripts
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Script Hub By GameDimond246810", "DarkTheme")
+local Tab = Window:NewTab("Scripts")
+local Section = Tab:NewSection("Scripts")
+Section:NewButton("Infinite Yield", "Executes Inf Yield.", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+Section:NewButton("Fates Admin", "Executes Fate Admin.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+Section:NewButton("SolarisHub", "Executes SolarisHub.", function()
+loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
+end)
+Section:NewButton("OwlHub", "Executes OwlHub.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZinityDrops/OwlHubLink/master/OwlHubBack.lua"))();
+end)
+
+--Specific Scripts
+
+local Tab = Window:NewTab("Specific Scripts")
+local Section = Tab:NewSection("Scripts")
+Section:NewButton("Pet Sim X 1", "Executes Pet Sim X Script.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/4lve/Roblox/main/PetSimX.lua"))()
+end)
+Section:NewButton("Pet Sim X 2", "Executes Pet Sim X Script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/W41K3R-Hub/W41K3R/main/Loader.lua"))()
+end)
+
+--Trolling
+
+local Tab = Window:NewTab("Trolling")
+local Section = Tab:NewSection("Scripts")
+Section:NewButton("BigHead", "Requires Rthro Head", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sysGhost-aka-BiKode/BigHeadV2/main/BigHeadV2-r15", true))()
+end)
+Section:NewButton("Titan Script", "Makes You Big (requires max scaling)", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SkidOnTOP/TitanScript/main/Source%20Code'))()
+end)
+
+--Others
+
+local Tab = Window:NewTab("Other")
+local Section = Tab:NewSection("Functions")
+Section:NewSlider("WalkSpeed", "Change Local Character WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "Change Your JumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewSlider("Fov", "Change Your Field Of View", 120, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+workspace.CurrentCamera.FieldOfView = s
+end)
+
+--keybind
+
+local Tab = Window:NewTab("Key Binds")
+local Section = Tab:NewSection("Custom KeyBind")
+Section:NewKeybind("Toggle Ui", "Open/Close Ui", Enum.KeyCode.F, function()
+Library:ToggleUI()
+end)
